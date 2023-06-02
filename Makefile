@@ -1,7 +1,8 @@
+CXX=arch -x86_64 /usr/local/bin/g++-13
 # Need to compile for x86_64 because MATLAB runs on it ...
 # Otherwise, MATLAB says that it's not compatible because
 # it's a 32-bit library (which is at least half right, haha).
-CFLAGS :=  -std=c++17 -target x86_64-apple-macos12
+CFLAGS :=  -std=c++17 #-target x86_64-apple-macos12
 LDFLAGS := -Wl,-v
 SOURCES=$(src/)
 
