@@ -1,0 +1,8 @@
+# Compiled C++
+bin/
+
+# MATLAB interface files
+# (for convenience I generate them in this same repository)
+rops/
+definerops.m
+ropsData.xml
