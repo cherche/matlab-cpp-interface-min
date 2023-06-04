@@ -8,7 +8,7 @@ SOURCES=$(src/)
 bin/static/%.o: src/%.cpp
 	$(CXX) $(CFLAGS) -c -o $@ $^ $(LDFLAGS)
 
-bin/static/librops.a: bin/static/adder.o bin/static/multer.o
+bin/static/librops.a: bin/static/adder.o bin/static/multer.o bin/static/lin_alg.o
 	$(CXX) $(CFLAGS) $^ -o $@ -lginac -lcln -lgmp -Wl,-v,-dylib
 
 bin/main.o: src/main.cpp
