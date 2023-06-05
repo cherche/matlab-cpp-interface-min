@@ -3,6 +3,6 @@
 
 #include "globals.h"
 
-float multer(float, float);
+double multer(double, double);
 
 #endif // MULTER_H

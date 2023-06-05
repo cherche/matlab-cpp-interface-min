@@ -1,5 +1,5 @@
 #include "adder.h"
 
-float adder(float x, float y) {
+double adder(double x, double y) {
     return x + y;
 }

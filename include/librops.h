@@ -1,7 +1,7 @@
 #ifndef LIBROPS_H
 #define LIBROPS_H
 
-float adder(float, float);
-float multer(float, float);
+double adder(double, double);
+double multer(double, double);
 
 #endif // LIBROPS_H

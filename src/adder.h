@@ -3,6 +3,6 @@
 
 #include "globals.h"
 
-float adder(float, float);
+double adder(double, double);
 
 #endif // ADDER_H
