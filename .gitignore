@@ -3,6 +3,6 @@ bin/
 
 # MATLAB interface files
 # (for convenience I generate them in this same repository)
-rops/
+/rops/
 definerops.m
 ropsData.xml
