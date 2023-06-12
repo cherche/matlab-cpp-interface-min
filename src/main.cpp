@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "rops/adder.h"
 #include "rops/multer.h"
+#include "compat.h"
 #include <vector>
 
 using std::cout;
