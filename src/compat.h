@@ -1,6 +1,7 @@
 #ifndef COMPAT_H
 #define COMPAT_H
 
+#include "rops/lin_alg.h"
 #include <vector>
 #include <list>
 #include <sstream>
@@ -20,7 +21,11 @@ using GiNaC::ex;
 namespace g = GiNaC;
 
 const char* addMatrices(const char* s, const char* t);
+const char* bracketMatrices(const char* s, const char* t);
+g::matrix toMatrix(const char* s);
 g::matrix toMatrix(string s);
+const char* toCharArray(g::matrix a);
+const char* toCharArray(string str);
 string toString(g::matrix a);
 vector<string> split(string target, string delimiter);
 

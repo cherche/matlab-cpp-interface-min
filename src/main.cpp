@@ -32,5 +32,10 @@ int main(int argc, char* argv[]) {
     g::ex e = reader("1+z/3");
     cout << g::dflt << e << endl;
 
+    const char* ch1 = "[1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]";
+    const char* ch2 = "[x 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]";
+    cout << addMatrices(ch1, ch2) << endl;
+    cout << bracketMatrices(ch1, ch2) << endl;
+
     return 0;
 }

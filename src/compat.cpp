@@ -1,5 +1,24 @@
 #include "compat.h"
 
+const char* addMatrices(const char* s, const char* t) {
+    g::matrix x = toMatrix(s);
+    g::matrix y = toMatrix(t);
+    g::matrix z = x.add(y);
+    return toCharArray(z);
+}
+
+const char* bracketMatrices(const char* s, const char* t) {
+    g::matrix x = toMatrix(s);
+    g::matrix y = toMatrix(t);
+    g::matrix z = lin_alg::bracket(x, y);
+    return toCharArray(z);
+}
+
+g::matrix toMatrix(const char* s) {
+    string str(s);
+    return toMatrix(str);
+}
+
 // We assume the input is something like "[1 0; 0 1]"
 // (exactly that much whitespace, no more, no less)
 g::matrix toMatrix(string s) {
@@ -17,6 +36,7 @@ g::matrix toMatrix(string s) {
         mat.push_back(row);
     }
 
+    // TODO: Store symbols in a table
     parser reader;
     int r = mat.size();
     int c = mat[0].size();
@@ -30,6 +50,20 @@ g::matrix toMatrix(string s) {
 
     g::matrix result = g::matrix(r, c, myLst);
 
+    return result;
+}
+
+const char* toCharArray(g::matrix a) {
+    string str = toString(a);
+    return toCharArray(str);
+}
+
+const char* toCharArray(string str) {
+    // declaring character array (+1 for null terminator)
+    char* result = new char[str.length() + 1];
+    // copying the contents of the
+    // string to char array
+    strcpy(result, str.c_str());
     return result;
 }
 
