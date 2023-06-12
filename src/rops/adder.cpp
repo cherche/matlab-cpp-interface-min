@@ -53,6 +53,20 @@ g::matrix toMatrix(string s) {
     return result;
 }
 
+string toString(g::matrix a) {
+    string result = "";
+    for (int i = 0; i < a.rows(); i++) {
+        if (i != 0) result += "; ";
+        for (int j = 0; j < a.cols(); j++) {
+            if (j != 0) result += " ";
+            std::ostringstream s;
+            s << g::dflt << a(i, j);
+            result += s.str();
+        }
+    }
+    return "[" + result + "]";
+}
+
 vector<string> split(string target, string delimiter) {
     vector<string> components;
     if (!target.empty()) {
