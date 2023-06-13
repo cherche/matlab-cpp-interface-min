@@ -10,5 +10,6 @@ double multer(double x, double y);
 std::vector<double> id(std::vector<double> v);
 const char* id(const char* s);
 const char* addMatrices(const char* s, const char* t);
+const char* bracketMatrices(const char* s, const char* t);
 
 #endif // LIBROPS_H
