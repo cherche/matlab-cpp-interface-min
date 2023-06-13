@@ -24,7 +24,7 @@ g::matrix toMatrix(const char* s) {
 g::matrix toMatrix(string s) {
     string meat = s.substr(1, s.size() - 2);
     //std::cout << meat << std::endl;
-    vector<string> rows = split(meat, "; ");
+    vector<string> rows = split(meat, ";");
 
     // Make it into a 2d string vector ....
     // Can probably combine this with the next step.
@@ -70,7 +70,7 @@ const char* toCharArray(string str) {
 string toString(g::matrix a) {
     string result = "";
     for (int i = 0; i < a.rows(); i++) {
-        if (i != 0) result += "; ";
+        if (i != 0) result += ";";
         for (int j = 0; j < a.cols(); j++) {
             if (j != 0) result += " ";
             std::ostringstream s;
